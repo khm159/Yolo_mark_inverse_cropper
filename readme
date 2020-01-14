@@ -1,0 +1,15 @@
+This is inverse cropper for yolo v3 form tagged images set.
+This is made for cropping images using tagged txt files and jpg files.
+
+You need to install opencv-python.
+And make dir "input" and "output" in same folder.
+
+then you just excute the crop_yolo.py
+[output file name] : classnum_imagename.jpg
+
+warnning : 
+
+must to be tagged all of your dataset. 
+You must have all of the text files that correspond to the image file name.
+
+Thanks.
