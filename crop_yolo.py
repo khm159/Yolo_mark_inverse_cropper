@@ -25,10 +25,14 @@ def openfile(tag_name, jpg_name): #file load and processing
     openpath_tag = input_path+'/'+ tag_name
     openpath_jpg = input_path+'/'+ jpg_name
 
+    pure_image_name = os.path.splitext(jpg_name)
+    pure_txt_name = os.path.splitext(tag_name)
+
     
     f = open(openpath_tag,'r')
     i = 0
     while True:
+        if pure_txt_name != pure_txt_name : continue
         
         line = f.readline()
         if not line: break
@@ -69,7 +73,7 @@ def openfile(tag_name, jpg_name): #file load and processing
         
         #save images
         new_path = os.path.splitext(jpg_name)
-       
+           
         savepath = './output/'+classnum+'_'+new_path[0]+'_'+str(i)+'.jpg'
         i= i+1
         print ('saved : '+savepath+'\n')
@@ -94,6 +98,7 @@ listoftag = [file for file in listofall if file.endswith(".txt") or file.endswit
 
 for i in range(len(listofjpg)):
     openfile(listoftag[i],listofjpg[i])
+
 
 
 
