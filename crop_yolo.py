@@ -3,6 +3,7 @@ import os
 import cv2
 from PIL import Image, ImageTk
 import numpy
+import datetime
 
 input_path = './input' 
 output_path = './output'
@@ -26,13 +27,14 @@ def openfile(tag_name, jpg_name): #file load and processing
 
     
     f = open(openpath_tag,'r')
+    i = 0
     while True:
         
         line = f.readline()
         if not line: break
         classnum = findlinenum(line)
         print('input image : ' + openpath_jpg)
-        savepath = './output/'+classnum+'_'+jpg_name
+       
        
     
         #load original coordinates
@@ -64,13 +66,18 @@ def openfile(tag_name, jpg_name): #file load and processing
         #convert pil format to opencv format
         opencv_crop = numpy.array(crop_img)
         opencv_crop = opencv_crop[:, :, ::-1].copy()
-
+        
         #save images
+        new_path = os.path.splitext(jpg_name)
+       
+        savepath = './output/'+classnum+'_'+new_path[0]+'_'+str(i)+'.jpg'
+        i= i+1
+        print ('saved : '+savepath+'\n')
         cv2.imwrite(savepath,opencv_crop)
 
         
     f.close
-    
+
 def sorting(l1, l2):
         if l1 > l2:
             lmax, lmin = l1, l2
@@ -87,7 +94,6 @@ listoftag = [file for file in listofall if file.endswith(".txt") or file.endswit
 
 for i in range(len(listofjpg)):
     openfile(listoftag[i],listofjpg[i])
-
 
 
 
