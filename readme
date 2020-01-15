@@ -25,11 +25,18 @@ This program reverses this coordinate value and uses opencv to cut only the tagg
 
 *The generated file is in the following format:
 
-[Class number][Image file name].jpg
+[Class number]_[Image file name]_[createnum].jpg
 
-*The image file you insert must be saved as a matched txt file pair
 
 Thanks.
+
+======================2020.01.05==================================================
+some bug is fixed 
+1. in One Class id, Redundant Tagged Image is now saved as separate file properly 
+2. Adds a code that creates a file only if there is a pair of text and image files
+==================================================================================
+
+
 
 
 [한국어]
@@ -59,8 +66,6 @@ Yolo mark로 이미지 태깅을 진행하면, 아래와 같이 boundingbox의 �
 *생성된 파일의 형식은 아래와 같습니다.
 
 [클래스번호][이미지파일이름].jpg
-
-*넣는 이미지파일은 반드시 매칭된 txt파일 쌍으로 저장되어야 합니다.
 
 blog.naver.com/khm159
 khm159@naver.com
