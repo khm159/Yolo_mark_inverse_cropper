@@ -4,7 +4,7 @@ Yolo_mark_inverse_cropper
 [English]
 ---------------
 
-It was developed by necessity.
+It was developed to recycle some learning data from the label portion of the dataset tagged for YOLO mark.
 
 When image tagging is carried out with the Yolo mark, the coordinate value of the bounding box is as shown below.
 
@@ -66,6 +66,7 @@ Yolo mark로 이미지 태깅을 진행하면, 아래와 같이 boundingbox의 �
 
 이 좌표값을 역변환하여 opencv를 이용해 원본 이미지에서 태깅한 부분만을 잘라내는 프로그램입니다.
 
+YOLO mark 용으로 태깅된 데이터셋의 label 부분을 일부 학습 데이터로 재활용하기 위해서 개발되었습니다.
 
 *input 폴더에 jpg이미지와 yolomark로 태깅한 txt파일을 함께넣고 실행하면 output폴더에 생성됩니다.
 
