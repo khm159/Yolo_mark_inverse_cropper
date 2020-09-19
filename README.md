@@ -34,11 +34,11 @@ This program reverses this coordinate value and uses opencv to cut only the tagg
 
 Thanks.
 
-======================2020.01.05==================================================
+*2020.01.05
 some bug is fixed 
 1. in One Class id, Redundant Tagged Image is now saved as separate file properly 
 2. Adds a code that creates a file only if there is a pair of text and image files
-==================================================================================
+
 
 
 
