@@ -74,5 +74,3 @@ YOLO mark 용으로 태깅된 데이터셋의 label 부분을 일부 학습 데�
 
 [클래스번호][이미지파일이름].jpg
 
-blog.naver.com/khm159
-khm159@naver.com
